@@ -77,30 +77,6 @@ function reset(){
   lapBtn.disabled = true;
 }
 
-function LapsList() {
-  if (!startTimestamp) return; // safety check
-
-  lapCount++; // 👈 guaranteed +1
-
-  const now = performance.now();
-  const currentElapsed = elapsed + (now - startTimestamp);
-
-  const li = document.createElement('li');
-
-  const left = document.createElement('span');
-  left.textContent = `Lap ${lapCount}`;
-
-  const right = document.createElement('span');
-  right.textContent = formatTime(Math.floor(currentElapsed));
-
-  li.appendChild(left);
-  li.appendChild(right);
-
-  // prepend newest on top
-  lapsList.insertBefore(li, lapsList.firstChild);
-
-  resetBtn.disabled = false;
-}
 
 
 // hook up events
