@@ -1,11 +1,10 @@
-// Stopwatch logic using elapsed ms and setInterval
+
 
 const display = document.getElementById('display');
 const startBtn = document.getElementById('startBtn');
 const stopBtn = document.getElementById('stopBtn');
 const resetBtn = document.getElementById('resetBtn');
 const lapBtn = document.getElementById('lapBtn');
-const lapsList = document.getElementById('lapsList');
 
 let intervalId = null;       // reference to setInterval
 let startTimestamp = 0;      // when the current run started (performance.now())
