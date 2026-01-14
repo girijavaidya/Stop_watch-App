@@ -1,11 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stlesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timer_Watch_02</title>
 </head>
 <body>
+    <main class="card" role="main" aria-labelledby="title">
+   <header>
+    <div class="logo">SW</div>
+    <div>
+        <h1 id="title">Day 2: StopWatch Timer</h1>
+        <p class="lead">A simple stopwatch using <code>setInterval()</code>, <code>clearInterval()</code>, and time arithmetic.</p>
+
+    </div>
+   </header>
+   <section class="stopwatch">
+    <div class="display" id="display" aria-live="polite">
+  00:00:00
+    </div>
+    <div class="controls" role="group" aria-label="Stopwatch controls">
+        <button id="startBtn" class="btn">Start</button>
+        <button id="stopBtn" class="btn secondary" disabled>Stop</button>
+         <button id="lapBtn" class="btn secondary" disabled>Lap</button>
+         <button id="resetBtn" class="btn secondary" disabled>Reset</button>
+    </div>
+
+    <section class="laps" aria-label="laps">
+        <h2 class="small">Laps</h2>
+        <ol id="LapsList" class="laps-list" aria-live="polite"></ol>
+
+    </section>
+
+    <details style="margin-top: 12px;">
+        <summary>How it works (short)</summary>
+        
+<p>The script keeps an elapsed milliseconds counter. On Start it notes the start timestamp and uses <code>setInterval()</code> to update the display frequently. On Stop it clears the interval and accumulates elapsed time. Reset clears everything.</p>
+    </details>
+
+   </section>
+    </main>
+
+    <script src="script.js"></script>
     
 </body>
 </html>
